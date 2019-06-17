@@ -11,9 +11,10 @@ class SearchBar extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className = 'ui component'>
                 <form>
-                    <input type = 'text' value/>
+                    <div className = ''
+                    <input type = 'text' />
                 </form>
             </div>
         )
