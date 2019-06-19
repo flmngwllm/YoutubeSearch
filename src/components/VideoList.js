@@ -8,7 +8,7 @@ const renderedList = videos.map(video => {
 });
 
     return(
-        <div>
+        <div className= "ui relaxed divided list">
             {renderedList}
         </div>
     )
