@@ -23,7 +23,7 @@ this.setState({videos: response.data.items})
         return(
             <div className = 'ui container'>
             <SearchBar onFormSubmit={this.onTermSubmit} />
-            <VideoList video={this.state.videos}/>
+            <VideoList videos={this.state.videos}/>
             </div>
         )
     }
