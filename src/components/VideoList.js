@@ -1,8 +1,10 @@
 import React from 'react'
 import VideoItem from './VideoItem'
 
+//passing videos and onVideoselect as props
 const VideoList = ({ videos, onVideoSelect }) => {
-    // props.videos
+    
+//mapping through th video
 const renderedList = videos.map(video => {
     return <VideoItem key={video.id.videoId} onVideoSelect={onVideoSelect} video={video} />
 });
