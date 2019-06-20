@@ -11,6 +11,10 @@ state = {
     selectedVideo: null
 }
 
+//makes a default search when app first loads up
+componentDidMount(){
+    this.onTermSubmit('youtube')
+}
 //making axios call to youtube api
 onTermSubmit = async (term) => {
  const response = await youtube.get('/search', {
@@ -18,7 +22,11 @@ onTermSubmit = async (term) => {
         q: term
     }
 });
-this.setState({videos: response.data.items})
+this.setState({
+    videos: response.data.items,
+    //grabs the first video and sets it on the page
+    selectedVideo: response.data.items[0]
+})
 
 };
 
